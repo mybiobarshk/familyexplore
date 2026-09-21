@@ -1,148 +1,51 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hant-HK">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Flowpath unifies your complete wellness tools so your crew can focus on real progress." />
-  <title>flowpath — Bridge the gaps</title>
-  <link rel="preconnect" href="https://db.onlinewebfonts.com" />
-  <link href="https://db.onlinewebfonts.com/c/08e020de1811ec4489f82d1247a42c09?family=Helvetica+Now+Text" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <style type="text/tailwindcss">
-    * { font-family: "Helvetica Now Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-    .liquid-glass {
-      background: rgba(255, 255, 255, 0.01);
-      background-blend-mode: luminosity;
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-      border: none;
-      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
-      position: relative;
-      overflow: hidden;
-    }
-    .liquid-glass::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      padding: 1.4px;
-      background: linear-gradient(180deg,
-        rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
-        rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
-        rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      pointer-events: none;
-    }
-    @keyframes dropdown-in {
-      from { opacity: 0; transform: translateY(-4px) scale(0.96); }
-      to { opacity: 1; transform: translateY(0) scale(1); }
-    }
-    .animate-dropdown { animation: dropdown-in 0.2s ease-out; }
-    .duration-400 { transition-duration: 400ms; }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="FamilyExplore 家庭系統自我探索工具，從探索到發現真正的我們。" />
+  <title>FamilyExplore｜家庭系統自我探索工具</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--ink:#111;--muted:#656565;--glass:rgba(250,250,248,.62);--ease:cubic-bezier(.16,1,.3,1)}
+    *,*:before,*:after{box-sizing:border-box}html,body{margin:0;background:#eef2ee;overflow-x:hidden}body{font-family:"Noto Sans TC","Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}body.menu-open{overflow:hidden}
+    button,a{font:inherit}.hero{position:relative;height:100vh;height:100svh;min-height:620px;width:100%;overflow:hidden;display:flex;flex-direction:column}.hero__bg{position:absolute;inset:0;z-index:0;animation:fade-in 1.1s var(--ease) both}.hero__bg video{position:absolute;inset:0;width:100%;height:100%;object-fit:fill}.hero__inner{position:relative;z-index:2;display:flex;flex-direction:column;flex:1;min-height:0}
+    .nav{position:relative;z-index:70;width:100%;max-width:1120px;margin:0 auto;padding:26px 24px 0;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px}.brand{display:inline-flex;align-items:center;gap:10px;color:#111;text-decoration:none;font:600 25px/1 "Poppins",sans-serif;letter-spacing:-.035em}.brand svg{width:30px;height:30px;display:block}.nav__links{display:flex;align-items:center;gap:42px;list-style:none;margin:0;padding:0}.nav__links a{font-size:15px;color:#1a1a1a;text-decoration:none;opacity:.76;transition:opacity .18s}.nav__links a:hover{opacity:.48}.nav__cta{justify-self:end}.btn-dark{display:inline-flex;align-items:center;justify-content:center;background:#141414;color:#fff;text-decoration:none;font-size:14.5px;font-weight:500;padding:13px 22px;border:0;border-radius:9px;white-space:nowrap;cursor:pointer;transition:.18s}.btn-dark:hover{background:#000;transform:translateY(-1px)}
+    .nav__toggle{display:none;align-items:center;justify-content:center;width:44px;height:44px;margin-right:-10px;padding:0;border:0;background:transparent;cursor:pointer}.nav__toggle-box{position:relative;display:block;width:22px;height:14px}.nav__toggle .bar{position:absolute;left:0;width:100%;height:1.8px;border-radius:2px;background:#141414;transition:transform .55s var(--ease),width .45s var(--ease)}.bar--top{top:0}.bar--bot{bottom:0;width:70%}.nav__toggle[aria-expanded=true] .bar--top{transform:translateY(6.1px) rotate(45deg)}.nav__toggle[aria-expanded=true] .bar--bot{width:100%;transform:translateY(-6.1px) rotate(-45deg)}.nav .menu__cta{display:none}
+    .stage{flex:1;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px 24px 14px;gap:clamp(14px,2vh,22px)}.badge{display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,.9);border:1px solid rgba(0,0,0,.06);border-radius:999px;padding:7px 16px 7px 8px;font-size:13px;color:#666}.badge__tag{background:rgba(255,255,255,.98);border:1px solid rgba(0,0,0,.07);border-radius:999px;padding:3px 12px;color:#222}
+    .headline{margin:0;font-size:clamp(38px,5.3vw,70px);line-height:1.05;font-weight:300;letter-spacing:-.055em}.sub{margin:0;max-width:650px;font-size:clamp(14px,1.25vw,17px);line-height:1.75;color:#666}.prompt{width:min(790px,100%);background:var(--glass);backdrop-filter:blur(18px) saturate(1.1);-webkit-backdrop-filter:blur(18px) saturate(1.1);border:1px solid rgba(255,255,255,.55);border-radius:20px;padding:22px 20px 16px;text-align:left;box-shadow:0 18px 44px -26px rgba(0,0,0,.28);margin-top:4px}.prompt__question{margin:0;font-size:20px;font-weight:300;color:#555}.prompt__meta{margin:30px 0 2px;color:#657273;font-size:13px}.prompt__bar{display:flex;justify-content:flex-end;align-items:center}.send{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border:0;border-radius:13px;background:#141414;color:#fff;cursor:pointer}.send svg{width:22px;height:22px}.send:hover{background:#000}.step-panel{display:none}.step-panel.active{display:block}.options{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:17px}.option{padding:13px 15px;border:1px solid rgba(0,0,0,.09);border-radius:14px;background:rgba(255,255,255,.5);color:#333;text-align:left;cursor:pointer}.option:hover,.option.selected{background:#fff;border-color:rgba(0,0,0,.18)}.step-actions{display:flex;justify-content:space-between;align-items:center;margin-top:14px}.back{border:0;background:transparent;color:#666;cursor:pointer}.result{line-height:1.7;color:#444}.hidden{display:none!important}
+    @keyframes fade-in{from{opacity:0}to{opacity:1}}@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}.rise{animation:rise .85s var(--ease) both;animation-delay:calc(var(--i,0)*70ms)}
+    @media(max-width:900px){.nav{display:flex;padding:18px 20px 0}.brand,.nav__toggle{position:relative;z-index:80}.brand{font-size:21px;margin-right:auto}.brand svg{width:25px;height:25px}.nav__toggle{display:inline-flex}.nav__nav{position:fixed;inset:0;z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:30px;padding:92px 28px 46px;background:#fafbf9;opacity:0;visibility:hidden;transform:translateY(-12px);transition:opacity .45s var(--ease),transform .45s var(--ease),visibility 0s linear .45s}.nav__nav.is-open{opacity:1;visibility:visible;transform:none;transition:opacity .6s var(--ease),transform .6s var(--ease),visibility 0s}.nav__links{flex-direction:column;gap:8px}.nav__links a{display:block;padding:7px;font-size:30px;font-weight:500}.menu__cta{opacity:0}.nav__nav.is-open .menu__cta{opacity:1}.stage{padding-top:26px}.headline{font-size:clamp(34px,8vw,56px)}}
+    @media(max-width:640px){.hero{min-height:600px}.nav__cta{display:none}.nav .menu__cta{display:inline-flex}.stage{justify-content:flex-start;padding:70px 16px 20px;gap:15px}.headline{font-size:clamp(34px,10vw,46px)}.sub{font-size:14px;max-width:37ch}.prompt{padding:17px 14px 13px;border-radius:17px}.prompt__question{font-size:17px}.prompt__meta{margin-top:22px}.options{grid-template-columns:1fr}.badge{font-size:12px}}
+    @media(prefers-reduced-motion:reduce){.hero__bg video{display:none}.hero__bg,.rise{animation:none!important}}
   </style>
 </head>
-<body class="m-0 bg-[#2C221C]">
-  <div id="root"></div>
-  <script type="module">
-    import React, { useState } from "https://esm.sh/react@19.2.0";
-    import { createRoot } from "https://esm.sh/react-dom@19.2.0/client";
-    import { ChevronDown, Menu, X } from "https://esm.sh/lucide-react@0.468.0?deps=react@19.2.0";
-
-    const h = React.createElement;
-    const navigation = [
-      { label: "Product", items: ["Connections", "Workflows", "Insights"] },
-      { label: "Solutions", items: ["Guides", "Use cases", "API reference"] },
-      { label: "About", items: ["Our story", "Open roles", "Reach us"] },
-      { label: "Plans" },
-    ];
-
-    function Logo() {
-      return h("a", { href: "#", className: "relative z-20 flex items-center gap-2.5 text-white", "aria-label": "flowpath home" },
-        h("svg", { width: 28, height: 28, viewBox: "0 0 28 28", fill: "none", "aria-hidden": "true" },
-          h("path", { d: "M14 1.75 26.25 14 14 26.25 1.75 14 14 1.75Z", fill: "white", opacity: "0.9" }),
-          h("path", { d: "M14 6.5 21.5 14 14 21.5 6.5 14 14 6.5Z", fill: "#2C221C", opacity: "0.5" })
-        ),
-        h("span", { className: "text-lg sm:text-xl font-medium tracking-tight" }, "flowpath")
-      );
-    }
-
-    function DesktopNav() {
-      const [open, setOpen] = useState(null);
-      return h("div", { className: "hidden md:flex items-center gap-7 lg:gap-9" },
-        navigation.map((item) => h("div", {
-          key: item.label,
-          className: "relative",
-          onMouseEnter: () => item.items && setOpen(item.label),
-          onMouseLeave: () => setOpen(null)
-        },
-          h("button", { className: "flex items-center gap-1 text-white/90 hover:text-white text-sm font-medium transition-colors", type: "button" },
-            item.label,
-            item.items && h(ChevronDown, { className: `h-3.5 w-3.5 transition-transform duration-300 ${open === item.label ? "rotate-180" : ""}` })
-          ),
-          item.items && open === item.label && h("div", { className: "liquid-glass !absolute top-full left-0 mt-3 rounded-xl py-3 px-2 min-w-[160px] shadow-xl animate-dropdown" },
-            item.items.map((sub) => h("a", { key: sub, href: "#", className: "block px-3 py-2 text-white/80 hover:text-white text-sm rounded-lg hover:bg-white/5 transition-colors" }, sub))
-          )
-        ))
-      );
-    }
-
-    function MobileMenu({ open }) {
-      return h("div", { className: `md:hidden absolute left-5 right-5 sm:left-6 sm:right-6 top-full z-20 bg-[#2C221C]/95 backdrop-blur-xl rounded-2xl p-6 transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${open ? "opacity-100 translate-y-2 visible" : "opacity-0 -translate-y-4 invisible pointer-events-none"}` },
-        h("div", { className: "space-y-5" }, navigation.map((item) => h("div", { key: item.label },
-          h("a", { href: "#", className: "text-white text-base font-medium" }, item.label),
-          item.items && h("div", { className: "mt-3 ml-4 space-y-2 border-l border-white/10 pl-4" },
-            item.items.map((sub) => h("a", { key: sub, href: "#", className: "block text-white/65 hover:text-white text-sm transition-colors" }, sub))
-          )
-        ))),
-        h("div", { className: "mt-6 pt-5 border-t border-white/10 flex items-center justify-between" },
-          h("a", { href: "#", className: "text-white/90 hover:text-white text-sm font-medium" }, "Log in"),
-          h("a", { href: "#", className: "liquid-glass rounded-full px-5 py-2 text-white text-sm font-medium" }, h("span", { className: "relative z-10" }, "Try it free"))
-        )
-      );
-    }
-
-    function App() {
-      const [mobileOpen, setMobileOpen] = useState(false);
-      return h("section", { className: "relative h-screen w-full overflow-hidden flex flex-col" },
-        h("video", {
-          className: "absolute inset-0 h-full w-full object-cover",
-          src: "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260703_053131_1ec3dd1c-d627-44fb-ab20-6e1fce41b0d5.mp4",
-          autoPlay: true, muted: true, loop: true, playsInline: true
-        }),
-        h("div", { className: "absolute inset-0 bg-black/10" }),
-        h("nav", { className: "relative z-20 w-full px-5 sm:px-6 md:px-12 lg:px-16 py-4 sm:py-5" },
-          h("div", { className: "flex items-center justify-between" },
-            h(Logo),
-            h(DesktopNav),
-            h("div", { className: "hidden md:flex items-center gap-5" },
-              h("a", { href: "#", className: "text-white/90 hover:text-white text-sm font-medium transition-colors" }, "Log in"),
-              h("a", { href: "#", className: "liquid-glass rounded-full px-5 py-2 text-white text-sm font-medium hover:bg-white/5 transition-colors" }, h("span", { className: "relative z-10" }, "Try it free"))
-            ),
-            h("button", { className: "md:hidden relative z-20 h-10 w-10 text-white", onClick: () => setMobileOpen(!mobileOpen), type: "button", "aria-label": mobileOpen ? "Close menu" : "Open menu", "aria-expanded": mobileOpen },
-              h(Menu, { className: `absolute inset-2 h-6 w-6 transition-all duration-300 ${mobileOpen ? "rotate-90 scale-75 opacity-0" : "rotate-0 scale-100 opacity-100"}` }),
-              h(X, { className: `absolute inset-2 h-6 w-6 transition-all duration-300 ${mobileOpen ? "rotate-0 scale-100 opacity-100" : "-rotate-90 scale-75 opacity-0"}` })
-            )
-          ),
-          h(MobileMenu, { open: mobileOpen })
-        ),
-        h("div", { className: "relative z-10 flex-1 flex items-start justify-center px-5 pt-16 sm:pt-20 md:pt-24" },
-          h("div", { className: "text-center max-w-3xl" },
-            h("h1", { className: "text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] tracking-[-0.02em]" },
-              "Bridge the", h("br"), "gaps. ", h("span", { className: "text-white/60" }, "Ditch the"), h("br"), h("span", { className: "text-white/60" }, "grindwork.")
-            ),
-            h("p", { className: "text-white/80 text-sm sm:text-base md:text-lg leading-relaxed max-w-md mx-auto mt-6 sm:mt-8" }, "Flowpath unifies your complete wellness tools, so your crew spends less energy plugging gaps and more on real progress."),
-            h("div", { className: "flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-6 sm:mt-8" },
-              h("a", { href: "#", className: "px-5 sm:px-6 py-2.5 sm:py-3 bg-white text-gray-900 text-sm font-semibold rounded-full hover:bg-white/90 transition-colors" }, "Begin your journey"),
-              h("a", { href: "#", className: "px-5 sm:px-6 py-2.5 sm:py-3 liquid-glass rounded-full text-white text-sm font-semibold hover:bg-white/10 transition-colors" }, h("span", { className: "relative z-10" }, "See it live"))
-            )
-          )
-        )
-      );
-    }
-
-    createRoot(document.getElementById("root")).render(h(App));
-  </script>
-</body>
-</html>
+<body>
+<section class="hero" id="top">
+  <div class="hero__bg"><video autoplay muted loop playsinline preload="auto" poster="https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260831_223518_f11bfa03-4e65-47e1-a4a7-30e42a7a8c2f.png&amp;w=1920&amp;q=85"><source type="video/mp4" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260831_232706_43757be4-2250-4f09-8cd7-23aebbf147ad.mp4"></video></div>
+  <div class="hero__inner">
+    <header class="nav">
+      <a class="brand" href="#top"><svg class="rise" style="--i:0" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 2.5 29.5 16 16 29.5 2.5 16 16 2.5Z" stroke="#141414" stroke-width="1.7"/><path d="M16 9.5 22.5 16 16 22.5 9.5 16 16 9.5Z" fill="#141414"/></svg><span class="rise" style="--i:1">FamilyExplore</span></a>
+      <nav class="nav__nav" id="site-menu"><ul class="nav__links"><li><a href="#explore">開始探索</a></li><li><a href="#explore">探索方法</a></li><li><a href="#notice">使用提示</a></li></ul><a class="btn-dark menu__cta" href="#explore">開始探索</a></nav>
+      <div class="nav__cta rise" style="--i:6"><a class="btn-dark" href="#explore">開始探索</a></div>
+      <button class="nav__toggle rise" style="--i:6" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><span class="nav__toggle-box"><span class="bar bar--top"></span><span class="bar bar--bot"></span></span></button>
+    </header>
+    <main class="stage" id="explore">
+      <div class="badge rise" style="--i:8"><span class="badge__tag">現在</span><span>給自己幾分鐘安靜看見</span></div>
+      <h1 class="headline rise" style="--i:10">從探索到發現<br>真正的我們</h1>
+      <p class="sub rise" style="--i:12">整理一個困擾你的情境，分開感受、家庭經驗與現實選擇。<br>答案不替你下定論，只幫你把內在聲音看得更清楚。</p>
+      <section class="prompt rise" style="--i:14" aria-live="polite">
+        <div id="questionView"><p class="prompt__question" id="question">你最近最想看清的是哪一段重複？</p><div class="options hidden" id="options"></div><div class="prompt__bar"><p class="prompt__meta" id="meta">4 個探索層次 · 約 5–8 分鐘 · 不上載個人資料</p><button class="send" id="next" aria-label="開始探索"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button></div><div class="step-actions hidden" id="actions"><button class="back" id="back">← 上一步</button><span id="count">1 / 4</span></div></div>
+        <div class="result hidden" id="result"><p class="prompt__question">你正在看見一個熟悉的模式</p><p id="summary"></p><button class="send" id="again" aria-label="重新探索">↻</button></div>
+      </section>
+    </main>
+    <div id="notice" class="hidden">這是自我覺察工具，不提供心理診斷或治療。</div>
+  </div>
+</section>
+<script>
+(()=>{const toggle=document.querySelector('#menu-toggle'),menu=document.querySelector('#site-menu');if(toggle&&menu){const setMenu=o=>{toggle.setAttribute('aria-expanded',String(o));toggle.setAttribute('aria-label',o?'Close menu':'Open menu');menu.classList.toggle('is-open',o);document.body.classList.toggle('menu-open',o)};toggle.onclick=()=>setMenu(toggle.getAttribute('aria-expanded')!=='true');menu.querySelectorAll('a').forEach(a=>a.onclick=()=>setMenu(false));addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false)});addEventListener('resize',()=>{if(innerWidth>900)setMenu(false)})}
+const data=[['此刻，你最想看清哪一個主題？',['金錢與接收','親密關係','父母與家庭','工作與價值']],['當事情發生，你最先感受到甚麼？',['委屈','憤怒','害怕','內疚']],['你通常會站在哪一個位置？',['過度承擔','尋求認同','難以設界線','重複熟悉模式']],['哪一句話最像你內心的規則？',['只有付出才值得被愛','拒絕會令我失去關係','別人的需要比我重要','沒有結果代表我沒有價值']]];let step=-1,answers=[];const q=document.querySelector('#question'),opts=document.querySelector('#options'),next=document.querySelector('#next'),meta=document.querySelector('#meta'),actions=document.querySelector('#actions'),back=document.querySelector('#back'),count=document.querySelector('#count');function render(){q.textContent=data[step][0];opts.innerHTML=data[step][1].map(x=>`<button class="option${answers[step]===x?' selected':''}" data-v="${x}">${x}</button>`).join('');opts.classList.remove('hidden');meta.textContent='選擇最接近你此刻感受的一項';actions.classList.remove('hidden');count.textContent=`${step+1} / 4`;next.disabled=!answers[step];opts.querySelectorAll('button').forEach(b=>b.onclick=()=>{answers[step]=b.dataset.v;render()})}next.onclick=()=>{if(step<0){step=0;render();return}if(step<3){step++;render();return}document.querySelector('#questionView').classList.add('hidden');document.querySelector('#result').classList.remove('hidden');document.querySelector('#summary').textContent=`當「${answers[0]}」被觸發時，你可能先感到${answers[1]}，並進入「${answers[2]}」的位置。你內心的規則「${answers[3]}」值得被看見，但它不等於現在全部的事實。`};back.onclick=()=>{if(step>0){step--;render()}};document.querySelector('#again').onclick=()=>location.reload()})();
+</script>
+</body></html>
